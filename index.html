@@ -99,28 +99,31 @@ body {
 /* Works Grid */
 .works {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* fixed grid */
   gap: 20px;
 }
 
-/* 1:1 square system */
+/* square cards */
 .work {
-  position: relative;
-  width: 100%;
   aspect-ratio: 1 / 1;
-  overflow: hidden;
   border-radius: 14px;
+  overflow: hidden;
   display: block;
 }
 
-/* image fills square */
+/* images */
 .work img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: 0.3s ease;
 }
 
+/* EMPTY PLACEHOLDERS */
+.placeholder {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+}
 /* hover effect (subtle premium feel) */
 .work:hover img {
   transform: scale(1.05);
@@ -162,6 +165,12 @@ body {
   <a href="https://www.behance.net/gallery/217684439/Logo-and-Visual-identity-of-Anonymouz" target="_blank" class="work glass">
     <img src="474758358_122138468408561420_2706092497101098915_n.jpg" alt="Work 1">
   </a>
+  <div class="work placeholder"></div>
+  <div class="work placeholder"></div>
+  <div class="work placeholder"></div>
+  <div class="work placeholder"></div>
+  <div class="work placeholder"></div>
+  <div class="work placeholder"></div>
 
 </div>
 
